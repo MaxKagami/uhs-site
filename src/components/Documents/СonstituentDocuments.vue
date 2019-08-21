@@ -1,13 +1,13 @@
 <template>
   <div>
-    <b-img :src="background" fluid/>
+    <p>Constituent</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home',
-  resource: 'Home',
+  name: 'constituent-documents',
+  resource: 'ConstituentDocuments',
   data () {
     return {
       background: require('@/assets/bg.jpg')

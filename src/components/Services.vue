@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'home',
-  resource: 'Home',
+  name: 'services',
+  resource: 'Services',
   data () {
     return {
-      background: require('@/assets/bg.jpg')
+      background: require('@/assets/bg_coop.jpg')
     }
   }
 }
