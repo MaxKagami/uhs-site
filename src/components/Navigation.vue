@@ -1,8 +1,9 @@
 <template>
   <div>
-    <b-navbar toggleable="sm" type="light" variant="light" >
+    <b-navbar toggleable="sm" type="light" variant="light">
+     <b-container>
       <b-navbar-brand to="/"><img class="img-fluid" :src="logo"/></b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="nav-collapse"/>
       <div class="flex-column">
         <b-navbar-nav>
           <b-nav-item>{{ telephone }}</b-nav-item>
@@ -16,12 +17,7 @@
               <b-dropdown-item>Для юридических лиц и ИП</b-dropdown-item>
               <b-dropdown-item>Для управляющих компаний и ТСЖ</b-dropdown-item>
             </b-nav-item-dropdown >
-            <b-nav-item-dropdown to="/documents" text="Документы" right>
-              <b-dropdown-item to="/constituent-documents">Учредительные документы</b-dropdown-item>
-              <b-dropdown-item to="/general-documents">Нормативно-правовые акты</b-dropdown-item>
-              <b-dropdown-item to="/disclosure">Раскрытие информации</b-dropdown-item>
-              <b-dropdown-item to="/labour-protection">Охрана труда</b-dropdown-item>
-            </b-nav-item-dropdown>
+            <b-nav-item to="/documents">Документы</b-nav-item>
             <b-nav-item>Районы</b-nav-item>
             <b-nav-item to="/news">Новости</b-nav-item>
             <b-nav-item to="/answers">Вопрос-ответ</b-nav-item>
@@ -30,6 +26,7 @@
           </b-navbar-nav>
         </b-collapse>
       </div>
+     </b-container>
     </b-navbar>
   </div>
 </template>

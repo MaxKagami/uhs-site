@@ -1,12 +1,19 @@
 <template>
   <div>
-    <h1>General Documents</h1>
+    <b-button v-for="document in documents"
+              :key="document.id"
+              :href="document.url"
+              target="_blank"
+              block variant="outline-success">
+      {{ document.name }}
+    </b-button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'general-documents',
-  resource: 'GeneralDocuments'
+  resource: 'GeneralDocuments',
+  props: [ 'documents' ]
 }
 </script>

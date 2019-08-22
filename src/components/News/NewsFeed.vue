@@ -6,7 +6,7 @@
       <div class="card-carousel">
         <div class="card-carousel--overflow-container">
           <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
-            <div class="card-carousel--card" v-for="post in posts" :key="post.id" >
+            <div class="card-carousel--card" v-for="post in posts" :key="post.id">
               <img :src="buildImageUrl(post.image)"/>
               <div class="card-carousel--card--footer">
                 <p>{{ post.date}}</p>

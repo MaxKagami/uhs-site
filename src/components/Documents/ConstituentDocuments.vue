@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: 'disclosure',
-  resource: 'Disclosure',
+  name: 'constituent-documents',
+  resource: 'ConstituentDocuments',
   props: [ 'documents' ]
 }
 </script>
