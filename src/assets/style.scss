@@ -5,6 +5,13 @@ $vue-teal: #42b883;
 $vue-teal-light: #42b983;
 $gray: #666a73;
 $light-gray: #f8f8f8;
+
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 //CARDS//
 .card {
   width: 280px;
@@ -156,4 +163,7 @@ $light-gray: #f8f8f8;
       }
     }
   }
+}
+footer {
+  background: lightgray;
 }

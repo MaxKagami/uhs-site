@@ -3,13 +3,35 @@
     <div class="img_wrapper">
       <b-img :src="background" fluid class="img_opacity"/>
       <div class="caption">
-        <h1>Контакты</h1>
-        <p>Свяжитесь с нами по контактам ниже или отправьте сообщение</p>
+        <h1>{{ $contacts.name }}</h1>
+        <p>{{ $contacts.subhead  }}</p>
       </div>
     </div>
     <b-container>
-      <p>8 800 350 39 62</p>
-      <p>mail@regop-komi.ru</p>
+      <b-row>
+        <b-col>
+          <div>
+            <p>{{ $contacts.main.telephone_name }}</p>
+            <p>{{ $contacts.main.telephone }}</p>
+          </div>
+        </b-col>
+        <b-col>
+          <div>
+            <p>{{ $contacts.main.email_name }}</p>
+            <p>{{ $contacts.main.email }}</p>
+          </div>
+          <div>
+            <p></p>
+            <p></p>
+          </div>
+        </b-col>
+        <b-col>
+          <div>
+            <p>{{ $contacts.main.address }}</p>
+            <p>{{ $contacts.map.link }}</p>
+          </div>
+        </b-col>
+      </b-row>
     </b-container>
     <yandex-map :coords="coords"
                 zoom="16.68"

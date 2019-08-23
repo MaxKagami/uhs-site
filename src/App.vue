@@ -1,8 +1,8 @@
 <template>
   <main>
     <navigation/>
-    <footer/>
     <router-view id="app"/>
+    <Footer/>
   </main>
 </template>
 
