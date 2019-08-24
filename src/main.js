@@ -21,6 +21,7 @@ Vue.prototype.$images = constants.images
 Vue.prototype.$about = constants.about
 Vue.prototype.$contacts = constants.contacts
 Vue.prototype.$site_info = constants.site_info
+Vue.prototype.$answers = constants.answers
 
 /* eslint-disable no-new */
 new Vue({
