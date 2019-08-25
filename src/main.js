@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import constants from './constants'
+import config from './config'
 import VueAxios from 'vue-axios'
 import { securedAxiosInstance, plainAxiosInstance } from './backend/axios'
 import BootstrapVue from 'bootstrap-vue'
@@ -17,6 +18,7 @@ Vue.use(VueAxios, {
   plain: plainAxiosInstance
 })
 
+Vue.prototype.$config = config
 Vue.prototype.$images = constants.images
 Vue.prototype.$about = constants.about
 Vue.prototype.$contacts = constants.contacts

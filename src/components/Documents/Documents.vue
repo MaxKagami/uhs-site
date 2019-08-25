@@ -9,8 +9,8 @@
     <b-tabs content-class="mt-3" tabs align="center">
       <b-tab title="Учредительные документы" @click="getDocuments(constituent_id)"><constituent-documents :documents="documents"/></b-tab>
       <b-tab title="Нормативно-правовые акты" @click="getDocuments(general_id)"><general-documents :documents="documents"/></b-tab>
-      <b-tab title="Раскрытие информации" @click="getDocuments(disclosure_id)"><disclosure :documents="documents"/></b-tab>
-      <b-tab title="Охрана труда" @click="getDocuments(protection_id)"><labour-protection :documents="documents"/></b-tab>
+      <b-tab title="Раскрытие информации" @click="getDocuments(disclosure_id)"><disclosure/></b-tab>
+      <b-tab title="Охрана труда" @click="getDocuments(protection_id)"><labour-protection/></b-tab>
     </b-tabs>
   </div>
 </template>

@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="img_wrap"><b-img :src="background" fluid class="img_opacity"/></div>
+    <div class="img_wrapper">
+      <b-img :src="background" fluid class="img_opacity"/>
+      <div class="caption">
+        <h1>Новости</h1>
+      </div>
+    </div>
     <div class="card-carousel-wrapper">
       <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
       <div class="card-carousel">

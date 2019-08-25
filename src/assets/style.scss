@@ -11,7 +11,38 @@ main {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+// NAVIGATION  //
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 4px 20px -6px black;
+}
 
+.jumbotron {
+  background: url("bg.jpg") no-repeat;
+  max-width: 100%;
+  padding-top: 260px;
+  padding-bottom: 60px;
+  border-radius: 0 !important;
+  margin-bottom: 0;
+}
+h1 span {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 15px 25px;
+  color: white;
+  background: #235ca9;
+}
+.box {
+}
+.shdw {
+  z-index: 9999;
+  box-shadow: 0 -2px 20px -6px black;
+}
 //CARDS//
 /*.card {
   width: 280px;
@@ -29,7 +60,7 @@ main {
 }*/
 //CAPTION//
 .img_wrapper {
-  position:relative;
+  position: relative;
   width: auto;
   height: 7em;
   overflow: hidden;

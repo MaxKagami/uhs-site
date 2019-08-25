@@ -1,6 +1,15 @@
 <template>
   <div>
-    <b-img :src="background" fluid/>
+    <b-jumbotron>
+      <b-container>
+        <h1><span>{{ $about.subhead }}</span></h1>
+      </b-container>
+    </b-jumbotron>
+    <div class="box shdw">
+      <b-container>
+        <h1>Региональный оператор по обращению с твердыми коммунальными отходами (ТКО)</h1>
+      </b-container>
+    </div>
   </div>
 </template>
 

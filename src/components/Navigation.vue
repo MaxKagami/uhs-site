@@ -42,11 +42,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .navbar {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-  }
-</style>
