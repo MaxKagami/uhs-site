@@ -2,22 +2,19 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $about.name }}</span></h1>
+        <h1><span>{{ $regions.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
-      <b-container>
-        <div><span v-html="$about.content"></span></div>
-        <div></div>
-      </b-container>
+      <b-container></b-container>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
-  resource: 'About',
+  name: 'regions',
+  resource: 'Regions',
   data: () => ({
   })
 }

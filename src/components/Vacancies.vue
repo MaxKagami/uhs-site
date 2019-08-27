@@ -1,5 +1,14 @@
 <template>
-  <div>Vacancies</div>
+  <div>
+    <b-jumbotron class="default-banner">
+      <b-container>
+        <h1><span>{{ $vacancies.name }}</span></h1>
+      </b-container>
+    </b-jumbotron>
+    <div class="box shdw">
+      <b-container></b-container>
+    </div>
+  </div>
 </template>
 
 <script>

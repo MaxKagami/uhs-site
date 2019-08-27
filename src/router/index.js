@@ -9,6 +9,7 @@ import Documents from '@/components/Documents/Documents'
 import Home from '@/components/Home'
 import Vacancies from '@/components/Vacancies'
 import NewsPost from '@/components/News/NewsPost'
+import Regions from '@/components/Regions'
 
 Vue.use(Router)
 
@@ -24,6 +25,7 @@ export default new Router({
     { path: '/post/:id', name: 'news-post', component: NewsPost, props: true },
     { path: '/answers', name: 'answers', component: Answers },
     { path: '/vacancies', name: 'vacancies', component: Vacancies },
-    { path: '/contacts', name: 'contacts', component: Contacts }
+    { path: '/contacts', name: 'contacts', component: Contacts },
+    { path: '/regions', name: 'regions', component: Regions }
   ]
 })

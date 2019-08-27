@@ -1,37 +1,37 @@
 <template>
   <div>
-    <b-container>
-      <div role="tablist">
-        <b-card no-body
-                v-for="form in forms"
-                :key="form.id"
-                class="mb-1">
-          <b-card-header header-tag="header" class="p-1" role="tab">
+    <div role="tablist">
+      <b-card no-body
+              class="mb-1"
+              v-for="form in forms"
+              :key="form.id">
+        <b-card-header class="p-1"
+                       header-tag="header"
+                       role="tab">
+          <b-button block
+                    href="#"
+                    v-b-toggle.accordion="'accordion-' + form.id"
+                    variant="success"
+                    @click="getBundles(form.id)">
+            {{ form.name }}
+          </b-button>
+        </b-card-header>
+        <b-collapse :id="'accordion-' + form.id"
+                    accordion="my-accordion"
+                    role="tabpanel">
+          <b-card-body>
             <b-button block
-                      href="#"
-                      v-b-toggle.accordion="'accordion-' + form.id"
-                      variant="success"
-                      @click="getBundles(form.id)">
-              {{ form.name }}
+                      v-for="document in bundles"
+                      :key="document.id"
+                      :href="$config.backend_url + document.url"
+                      target="_blank"
+                      variant="outline-success">
+              {{ document.name }}
             </b-button>
-          </b-card-header>
-          <b-collapse :id="'accordion-' + form.id"
-                      accordion="my-accordion" r
-                      ole="tabpanel">
-            <b-card-body>
-              <b-button block
-                        v-for="document in bundles"
-                        :key="document.id"
-                        :href="$config.backend_url + document.url"
-                        target="_blank"
-                        variant="outline-success">
-                {{ document.name }}
-              </b-button>
-            </b-card-body>
-          </b-collapse>
-        </b-card>
-      </div>
-    </b-container>
+          </b-card-body>
+        </b-collapse>
+      </b-card>
+    </div>
   </div>
 </template>
 

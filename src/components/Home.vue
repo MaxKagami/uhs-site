@@ -1,13 +1,13 @@
 <template>
   <div>
-    <b-jumbotron>
+    <b-jumbotron class="home-banner">
       <b-container>
-        <h1><span>{{ $about.subhead }}</span></h1>
+        <h1><span>{{ $home.subhead }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
       <b-container>
-        <h1>Региональный оператор по обращению с твердыми коммунальными отходами (ТКО)</h1>
+        <span v-html="$home.content"></span>
       </b-container>
     </div>
   </div>
@@ -17,10 +17,7 @@
 export default {
   name: 'home',
   resource: 'Home',
-  data () {
-    return {
-      background: require('@/assets/bg.jpg')
-    }
-  }
+  data: () => ({
+  })
 }
 </script>

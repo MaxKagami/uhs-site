@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div class="img_wrapper">
-      <b-img :src="background" fluid class="img_opacity"/>
-      <div class="caption">
-        <h1>{{ $contacts.name }}</h1>
-        <p>{{ $contacts.subhead  }}</p>
-      </div>
-    </div>
+    <b-jumbotron class="default-banner">
+      <b-container>
+        <h1><span>{{ $contacts.name }}</span></h1>
+      </b-container>
+    </b-jumbotron>
     <b-container>
+      <p>{{ $contacts.subhead }}</p>
       <b-row>
         <b-col>
           <div>

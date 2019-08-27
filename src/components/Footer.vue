@@ -37,3 +37,9 @@ export default {
   }
 }
 </script>
+
+<style>
+footer {
+  background: lightgray;
+}
+</style>

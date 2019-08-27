@@ -24,6 +24,12 @@ Vue.prototype.$about = constants.about
 Vue.prototype.$contacts = constants.contacts
 Vue.prototype.$site_info = constants.site_info
 Vue.prototype.$answers = constants.answers
+Vue.prototype.$documents = constants.documents
+Vue.prototype.$services = constants.services
+Vue.prototype.$vacancies = constants.vacancies
+Vue.prototype.$news = constants.news
+Vue.prototype.$regions = constants.regions
+Vue.prototype.$home = constants.home
 
 /* eslint-disable no-new */
 new Vue({
