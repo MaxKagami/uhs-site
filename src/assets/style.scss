@@ -3,12 +3,18 @@ $dark-blue: rgb(29,78,154);
 $light-blue: rgb(0,141,210);
 $green: rgb(0,151,70);
 $gray: #9399A3;
+$black: #40403e;
 
 main {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.text {
+  color: $black;
+  font-size: 1em;
 }
 
 // BANNER //
@@ -35,40 +41,16 @@ h1 span {
   z-index: 9999;
   box-shadow: 0 -2px 20px -6px black;
 }
-.home-banner {
-  background: url("bg.jpg") no-repeat center;
-  padding-top: 260px;
-  padding-bottom: 60px;
-}
-.services-banner {
-  background: url("bg_coop.jpg") no-repeat center;
-  padding-top: 220px;
-  padding-bottom: 60px;
-}
 .default-banner {
   background: url("sm.jpg");
   padding-top: 60px;
   padding-bottom: 20px;
 }
-//CARDS//
-/*.card {
-  width: 280px;
-  line-height: 24px;
-  color: #fff;
-  background: #235ca9;
-  position: absolute;
-  top: 120px;
-  right: 15px;
-  padding-top: 23px;
-  padding-left: 35px;
-  padding-right: 25px;
-  padding-bottom: 25px;
-  z-index: 1;
-}*/
 //CAPTION//
 .caption {
   top:0;
   left:0;
   position: absolute;
 }
+
 

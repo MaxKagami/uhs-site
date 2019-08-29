@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <b-container>
+    <b-container class="front">
       <b-row>
         <b-col cols="6">
           <div>
@@ -39,7 +39,8 @@ export default {
 </script>
 
 <style>
-footer {
-  background: lightgray;
+footer{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/footer1.jpg");
+  color: lightgray;
 }
 </style>

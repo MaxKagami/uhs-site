@@ -21,3 +21,11 @@ export default {
   })
 }
 </script>
+
+<style>
+.home-banner {
+  background: url("../assets/bg.jpg") no-repeat center;
+  padding-top: 260px;
+  padding-bottom: 60px;
+}
+</style>
