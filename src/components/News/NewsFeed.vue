@@ -33,13 +33,15 @@
 </template>
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 export default {
   name: 'news-feed',
   resource: 'NewsFeed',
   data: () => ({
+    posts_resource: '/news_posts',
     posts: [],
-    errors: []
+    errors: [],
+    isLoading: false
   }),
   created () {
     this.getPosts()
@@ -47,14 +49,11 @@ export default {
   computed: {
   },
   methods: {
-    getPosts () {
-      Axios.get('http://localhost:3000/api/v1/news_posts')
-        .then(response => {
-          this.posts = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getPosts () {
+      this.isLoading = true
+      const { data } = await axios(this.posts_resource)
+      this.isLoading = false
+      this.posts = data
     },
     getImageURL (path) {
       return (`http://localhost:3000/regop-komi-ru/${path}`)

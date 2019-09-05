@@ -2,7 +2,7 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $answers.name }}</span></h1>
+        <h1><span>{{ $constants.answers.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
@@ -25,26 +25,24 @@
 </template>
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 export default {
   name: 'answers',
   resource: 'Answers',
   data: () => ({
-    background: require('@/assets/bg.jpg'),
-    answers: []
+    resource_url: '/answers',
+    answers: [],
+    isLoading: false
   }),
-  created () {
-    this.getAnswers()
+  mounted () {
+    this.getAnswers(this.resource_url)
   },
   methods: {
-    getAnswers () {
-      Axios.get('http://localhost:3000/api/v1/answers')
-        .then(response => {
-          this.answers = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getAnswers (url) {
+      this.isLoading = true
+      const { data } = await axios(url)
+      this.isLoading = false
+      this.answers = data
     }
   }
 }

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 import ConstituentDocuments from './ConstituentDocuments'
 import LabourProtection from './LabourProtection'
 import GeneralDocuments from './GeneralDocuments'
@@ -30,26 +30,24 @@ export default {
   components: { Disclosure, GeneralDocuments, LabourProtection, ConstituentDocuments },
   data () {
     return {
-      background: require('@/assets/bg.jpg'),
+      group_resource: '/documents?document_group_id=',
       documents: [],
       constituent_id: '1',
       general_id: '2',
       disclosure_id: '3',
-      protection_id: '4'
+      protection_id: '4',
+      isLoading: false
     }
   },
-  created () {
+  mounted () {
     this.getDocuments(this.constituent_id)
   },
   methods: {
-    getDocuments (number) {
-      Axios.get('http://localhost:3000/api/v1/documents?document_group_id=' + number)
-        .then(response => {
-          this.documents = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getDocuments (id) {
+      this.isLoading = true
+      const { data } = await axios(this.group_resource + id)
+      this.isLoading = false
+      this.documents = data
     }
   }
 }

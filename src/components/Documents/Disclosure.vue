@@ -12,7 +12,7 @@
                     href="#"
                     v-b-toggle.accordion="'accordion-' + form.id"
                     variant="success"
-                    @click="getBundles(form.id)">
+                    @click="getDocuments(form.id)">
             {{ form.name }}
           </b-button>
         </b-card-header>
@@ -21,7 +21,7 @@
                     role="tabpanel">
           <b-card-body>
             <b-button block
-                      v-for="document in bundles"
+                      v-for="document in documents"
                       :key="document.id"
                       :href="$config.backend_url + document.url"
                       target="_blank"
@@ -36,35 +36,31 @@
 </template>
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 export default {
   name: 'disclosure',
   resource: 'Disclosure',
   data: () => ({
+    forms_resource: '/forms',
+    documents_resource: '/form_bundles?form_id=',
     forms: [],
-    bundles: []
+    documents: []
   }),
   created () {
     this.getForms()
   },
   methods: {
-    getForms () {
-      Axios.get('http://localhost:3000/api/v1/forms')
-        .then(response => {
-          this.forms = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getForms () {
+      this.isLoading = true
+      const { data } = await axios(this.forms_resource)
+      this.isLoading = false
+      this.forms = data
     },
-    getBundles (number) {
-      Axios.get('http://localhost:3000/api/v1/form_bundles?form_id=' + number)
-        .then(response => {
-          this.bundles = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getDocuments (id) {
+      this.isLoading = true
+      const { data } = await axios(this.documents_resource + id)
+      this.isLoading = false
+      this.documents = data
     }
   }
 }

@@ -4,24 +4,24 @@
       <b-row>
         <b-col cols="6">
           <div>
-            {{ $about.name }}
-            <p>{{ $about.info }}</p>
+            {{ $constants.about.name }}
+            <p>{{ $constants.about.info }}</p>
           </div>
         </b-col>
         <b-col>
-          {{ $contacts.name }}
-          <p>{{ $contacts.main.address }}</p>
+          {{ $constants.contacts.name }}
+          <p>{{ $constants.contact_info.address }}</p>
           <p></p>
-          <p>{{ $contacts.main.email }}</p>
+          <p>{{ $constants.contact_info.email }}</p>
         </b-col>
         <b-col>
-          {{ $contacts.social.subhead }}
+          {{ $constants.contacts.social.subhead }}
         </b-col>
       </b-row>
       <hr>
       <b-row>
-        <b-col>{{ $site_info.rights }}</b-col>
-        <b-col>{{ $site_info.attention }}</b-col>
+        <b-col>{{ $constants.site_info.rights }}</b-col>
+        <b-col>{{ $constants.site_info.attention }}</b-col>
       </b-row>
     </b-container>
   </footer>
@@ -30,17 +30,6 @@
 <script>
 export default {
   name: 'footer',
-  resource: 'Footer',
-  data () {
-    return {
-    }
-  }
+  resource: 'Footer'
 }
 </script>
-
-<style>
-footer{
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/footer1.jpg");
-  color: lightgray;
-}
-</style>

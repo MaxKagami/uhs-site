@@ -15,26 +15,25 @@
 </template>mounted
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 export default {
   name: 'news-post',
   resource: 'NewsPost',
   props: ['id'],
   data: () => ({
-    post: []
+    posts_resource: '/news_posts',
+    post: [],
+    isLoading: false
   }),
   created () {
     this.getPost(this.id)
   },
   methods: {
-    getPost (id) {
-      Axios.get('http://localhost:3000/api/v1/news_posts/' + id)
-        .then(response => {
-          this.post = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getPost (id) {
+      this.isLoading = true
+      const { data } = await axios(this.posts_resource + id)
+      this.isLoading = false
+      this.posts = data
     },
     getImageURL (path) {
       return (`http://localhost:3000/regop-komi-ru/${path}`)

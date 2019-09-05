@@ -2,23 +2,23 @@
   <div>
     <b-navbar toggleable="sm" type="light" variant="light">
      <b-container>
-      <b-navbar-brand to="/"><img class="img-fluid" :src="logo"/></b-navbar-brand>
+      <b-navbar-brand to="/"><img class="img-fluid" :src="$constants.images.logo"/></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"/>
       <div class="flex-column">
         <b-navbar-nav class="nav-upper">
-          <b-nav-item :href="'callto:' + $contacts.main.telephone_raw">{{ $contacts.main.telephone }}</b-nav-item>
-          <b-nav-item :href="'mailto:' + $contacts.main.email">{{ $contacts.main.email }}</b-nav-item>
+          <b-nav-item :href="'callto:' + $constants.contact_info.telephone_merged">{{ $constants.contact_info.telephone }}</b-nav-item>
+          <b-nav-item :href="'mailto:' + $constants.contact_info.email">{{ $constants.contact_info.email }}</b-nav-item>
         </b-navbar-nav>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mr-auto nav-lower">
-            <b-nav-item to="/about">{{ $about.name }}</b-nav-item>
-            <b-nav-item to="/services">{{ $services.main.name }}</b-nav-item>
-            <b-nav-item to="/documents">{{ $documents.name }}</b-nav-item>
-            <b-nav-item to="/regions">{{ $regions.name }}</b-nav-item>
-            <b-nav-item to="/news">{{ $news.name }}</b-nav-item>
-            <b-nav-item to="/answers">{{ $answers.name }}</b-nav-item>
-            <b-nav-item to="/vacancies">{{ $vacancies.name }}</b-nav-item>
-            <b-nav-item to="/contacts">{{ $contacts.name }}</b-nav-item>
+            <b-nav-item to="/about">{{ $constants.about.name }}</b-nav-item>
+            <b-nav-item to="/services">{{ $constants.services.name }}</b-nav-item>
+            <b-nav-item to="/documents">{{ $constants.documents.name }}</b-nav-item>
+            <b-nav-item to="/regions">{{ $constants.regions.name }}</b-nav-item>
+            <b-nav-item to="/news">{{ $constants.news.name }}</b-nav-item>
+            <b-nav-item to="/answers">{{ $constants.answers.name }}</b-nav-item>
+            <b-nav-item to="/vacancies">{{ $constants.vacancies.name }}</b-nav-item>
+            <b-nav-item to="/contacts">{{ $constants.contacts.name }}</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </div>
@@ -30,10 +30,7 @@
 <script>
 export default {
   name: 'navigation',
-  resource: 'Navigation',
-  data: () => ({
-    logo: require('../assets/logo.png')
-  })
+  resource: 'Navigation'
 }
 </script>
 

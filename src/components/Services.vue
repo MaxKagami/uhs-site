@@ -21,7 +21,7 @@
                         href="#"
                         v-b-toggle.accordion="'accordion-' + service.id"
                         variant="success"
-                        @click="getServiceMappings(service.id)">
+                        @click="getDocuments(service.id)">
                 {{ service.name }}
               </b-button>
             </b-card-header>
@@ -30,7 +30,7 @@
                         role="tabpanel">
               <b-card-body>
                 <b-button block
-                          v-for="document in mappings"
+                          v-for="document in documents"
                           :key="document.id"
                           :href="$config.backend_url + document.url"
                           target="_blank"
@@ -47,44 +47,33 @@
 </template>
 
 <script>
-import Axios from 'axios'
+import axios from '@/helpers/axios.js'
 export default {
   name: 'services',
   resource: 'Services',
   data: () => ({
+    services_url: '/services',
+    mapping_url: '/service_mappings?service_id=',
     services: [],
-    mappings: []
+    documents: [],
+    isLoading: false
   }),
-  created () {
+  mounted () {
     this.getServices()
   },
   methods: {
-    getServices () {
-      Axios.get('http://localhost:3000/api/v1/services')
-        .then(response => {
-          this.services = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getServices () {
+      this.isLoading = true
+      const { data } = await axios(this.services_url)
+      this.isLoading = false
+      this.services = data
     },
-    getServiceMappings (id) {
-      Axios.get('http://localhost:3000/api/v1/service_mappings?service_id=' + id)
-        .then(response => {
-          this.mappings = response.data
-        })
-        .catch(e => {
-          this.error.push(e)
-        })
+    async getDocuments (id) {
+      this.isLoading = true
+      const { data } = await axios(this.mapping_url + id)
+      this.isLoading = false
+      this.documents = data
     }
   }
 }
 </script>
-
-<style>
-.services-banner {
-  background: url("../assets/bg_coop.jpg") no-repeat center;
-  padding-top: 220px;
-  padding-bottom: 60px;
-}
-</style>

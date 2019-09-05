@@ -46,6 +46,16 @@ h1 span {
   padding-top: 60px;
   padding-bottom: 20px;
 }
+.home-banner {
+  background: url("bg.jpg") no-repeat center;
+  padding-top: 260px;
+  padding-bottom: 60px;
+}
+.services-banner {
+  background: url("bg_coop.jpg") no-repeat center;
+  padding-top: 220px;
+  padding-bottom: 60px;
+}
 //CAPTION//
 .caption {
   top:0;
@@ -53,4 +63,7 @@ h1 span {
   position: absolute;
 }
 
-
+footer{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("footer3.jpg");
+  color: lightgray;
+}
