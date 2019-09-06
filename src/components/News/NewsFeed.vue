@@ -2,7 +2,7 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $news.name }}</span></h1>
+        <h1><span>{{ $constants.news.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
@@ -21,7 +21,7 @@
               </b-col>
               <b-col md="8">
                 <b-card-body :title="post.title" :sub-title="post.data">
-                  <b-card-text>{{ getFragment(post.text) }}<span class="bold">{{ $news.more_text }}</span></b-card-text>
+                  <b-card-text>{{ getFragment(post.text) }}<span class="bold">{{ $constants.news.more_text }}</span></b-card-text>
                 </b-card-body>
               </b-col>
             </b-row>

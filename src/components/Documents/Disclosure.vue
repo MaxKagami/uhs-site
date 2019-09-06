@@ -23,7 +23,7 @@
             <b-button block
                       v-for="document in documents"
                       :key="document.id"
-                      :href="$config.backend_url + document.url"
+                      :href="$configs.backend_url + document.url"
                       target="_blank"
                       variant="outline-success">
               {{ document.name }}
@@ -41,8 +41,8 @@ export default {
   name: 'disclosure',
   resource: 'Disclosure',
   data: () => ({
-    forms_resource: '/forms',
-    documents_resource: '/form_bundles?form_id=',
+    forms_resource: '/document_forms',
+    documents_resource: '/form_mappings?form_id=',
     forms: [],
     documents: []
   }),

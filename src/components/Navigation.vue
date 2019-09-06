@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="sm" type="light" variant="light">
      <b-container>
-      <b-navbar-brand to="/"><img class="img-fluid" :src="$constants.images.logo"/></b-navbar-brand>
+      <b-navbar-brand to="/"><img class="img-fluid" :src="require('@/assets/logo.png')"/></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"/>
       <div class="flex-column">
         <b-navbar-nav class="nav-upper">

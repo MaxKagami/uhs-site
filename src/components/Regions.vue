@@ -2,7 +2,7 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $regions.name }}</span></h1>
+        <h1><span>{{ $constants.regions.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">

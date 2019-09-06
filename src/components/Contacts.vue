@@ -2,25 +2,25 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $contacts.name }}</span></h1>
+        <h1><span>{{ $constants.contacts.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
       <b-container>
-        <p>{{ $contacts.subhead }}</p>
+        <p>{{ $constants.contacts.subhead }}</p>
         <b-row>
           <b-col>
             <div>
-              {{ $contacts.main.telephone_name }}
+              {{ $constants.contact_info.telephone_name }}
               <br>
-              {{ $contacts.main.telephone }}
+              {{ $constants.contact_info.telephone }}
             </div>
           </b-col>
           <b-col>
             <div>
-              {{ $contacts.main.email_name }}
+              {{ $constants.contact_info.email_name }}
               <br>
-              {{ $contacts.main.email }}
+              {{ $constants.contact_info.email }}
             </div>
             <div>
 
@@ -28,9 +28,9 @@
           </b-col>
           <b-col>
             <div>
-              {{ $contacts.main.address }}
+              {{ $constants.contact_info.address }}
               <br>
-              {{ $contacts.map.link }}
+              {{ $constants.contacts.map.link }}
             </div>
           </b-col>
         </b-row>
@@ -39,8 +39,7 @@
     <yandex-map :coords="coords"
                 zoom="16.68"
                 style="width: auto; height: 30em;"
-                :controls="['fullscreenControl', 'geolocationControl', 'zoomControl', 'rulerControl', 'trafficControl']"
-                :placemarks="placemarks">
+                :controls="['fullscreenControl', 'geolocationControl', 'zoomControl', 'rulerControl', 'trafficControl']">
       <ymap-marker :coords="coords"
                    marker-type="placemark"
                    hint-content="ул. Гоголя, 35В"
@@ -51,21 +50,21 @@
     </yandex-map>
     <div class="box shdw">
       <b-container>
-        <b-form @submit="onSubmit" v-if="$config.contacts.callback_form">
-          <h4 class="text-center">{{ $contacts.callback.title }}</h4>
+        <b-form @submit="onSubmit" v-if="$configs.contacts.callback_form">
+          <h4 class="text-center">{{ $constants.contacts.callback.title }}</h4>
           <div class="callback-form">
             <b-row>
               <b-col class="padding-right">
                 <b-form-input class="input-1 squared margin-bottom"
                               v-model="callback.telephone"
-                              :placeholder="$contacts.callback.telephone"
+                              :placeholder="$constants.contacts.callback.telephone"
                               type="tel"
                               required></b-form-input>
               </b-col>
               <b-col class="padding-left">
                 <b-form-input class="input-2 squared margin-bottom"
                               v-model="callback.name"
-                              :placeholder="$contacts.callback.name"
+                              :placeholder="$constants.contacts.callback.name"
                               required></b-form-input>
               </b-col>
             </b-row>
@@ -73,7 +72,7 @@
               <b-col>
                 <b-form-textarea class="input-3 squared margin-bottom"
                                  v-model="callback.massage"
-                                 :placeholder="$contacts.callback.message"
+                                 :placeholder="$constants.contacts.callback.message"
                                  required></b-form-textarea>
               </b-col>
             </b-row>
@@ -81,7 +80,7 @@
                       squared
                       type="submit"
                       variant="outline-primary">
-              {{ $contacts.callback.button }}
+              {{ $constants.contacts.callback.button }}
             </b-button>
           </div>
         </b-form>

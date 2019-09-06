@@ -2,12 +2,12 @@
   <div>
     <b-jumbotron class="services-banner">
       <b-container>
-        <h1><span>{{ $services.main.subhead1 }}<br/>{{ $services.main.subhead2 }}</span></h1>
+        <h1><span>{{ $constants.services.subhead1 }}<br/>{{ $constants.services.subhead2 }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
       <b-container>
-        <span v-html="$services.main.content"></span>
+        <span v-html="$contents.services.text"></span>
         <br/>
         <div role="tablist">
           <b-card no-body
@@ -32,7 +32,7 @@
                 <b-button block
                           v-for="document in documents"
                           :key="document.id"
-                          :href="$config.backend_url + document.url"
+                          :href="$configs.backend_url + document.url"
                           target="_blank"
                           variant="outline-success">
                   {{ document.name }}

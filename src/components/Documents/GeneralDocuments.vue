@@ -2,7 +2,7 @@
   <div>
     <b-button v-for="document in documents"
               :key="document.id"
-              :href="$config.backend_url + document.url"
+              :href="$configs.backend_url + document.url"
               target="_blank"
               block variant="outline-success">
       {{ document.name }}
