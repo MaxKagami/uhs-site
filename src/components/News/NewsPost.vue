@@ -15,13 +15,11 @@
 </template>mounted
 
 <script>
-import axios from '@/helpers/axios.js'
 export default {
   name: 'news-post',
   resource: 'NewsPost',
   props: ['id'],
   data: () => ({
-    posts_resource: '/news_posts',
     post: [],
     isLoading: false
   }),
@@ -31,12 +29,12 @@ export default {
   methods: {
     async getPost (id) {
       this.isLoading = true
-      const { data } = await axios(this.posts_resource + id)
+      const { data } = await this.$axios(this.$configs.news.posts_resource + id)
       this.isLoading = false
       this.posts = data
     },
     getImageURL (path) {
-      return (`http://localhost:3000/regop-komi-ru/${path}`)
+      return (this.$configs.frontend_url + path)
     }
   }
 }

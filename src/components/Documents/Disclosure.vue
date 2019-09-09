@@ -36,15 +36,13 @@
 </template>
 
 <script>
-import axios from '@/helpers/axios.js'
 export default {
   name: 'disclosure',
   resource: 'Disclosure',
   data: () => ({
-    forms_resource: '/document_forms',
-    documents_resource: '/form_mappings?form_id=',
     forms: [],
-    documents: []
+    documents: [],
+    isLoading: false
   }),
   created () {
     this.getForms()
@@ -52,13 +50,13 @@ export default {
   methods: {
     async getForms () {
       this.isLoading = true
-      const { data } = await axios(this.forms_resource)
+      const { data } = await this.$axios(this.$configs.documents.forms_resource)
       this.isLoading = false
       this.forms = data
     },
     async getDocuments (id) {
       this.isLoading = true
-      const { data } = await axios(this.documents_resource + id)
+      const { data } = await this.$axios(this.$configs.documents.documents_resource + id)
       this.isLoading = false
       this.documents = data
     }

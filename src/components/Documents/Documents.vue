@@ -30,7 +30,6 @@ export default {
   components: { Disclosure, GeneralDocuments, LabourProtection, ConstituentDocuments },
   data () {
     return {
-      group_resource: '/documents?document_group_id=',
       documents: [],
       constituent_id: '1',
       general_id: '2',
@@ -45,7 +44,7 @@ export default {
   methods: {
     async getDocuments (id) {
       this.isLoading = true
-      const { data } = await axios(this.group_resource + id)
+      const { data } = await axios(this.$configs.documents.group_resource + id)
       this.isLoading = false
       this.documents = data
     }

@@ -25,22 +25,20 @@
 </template>
 
 <script>
-import axios from '@/helpers/axios.js'
 export default {
   name: 'answers',
   resource: 'Answers',
   data: () => ({
-    resource_url: '/answers',
     answers: [],
     isLoading: false
   }),
   mounted () {
-    this.getAnswers(this.resource_url)
+    this.getAnswers(this.$configs.answers.answers_resource)
   },
   methods: {
     async getAnswers (url) {
       this.isLoading = true
-      const { data } = await axios(url)
+      const { data } = await this.$axios(url)
       this.isLoading = false
       this.answers = data
     }

@@ -32,7 +32,7 @@
                 <b-button block
                           v-for="document in documents"
                           :key="document.id"
-                          :href="$configs.backend_url + document.url"
+                          :href="$configs.base_url + document.url"
                           target="_blank"
                           variant="outline-success">
                   {{ document.name }}
@@ -47,13 +47,10 @@
 </template>
 
 <script>
-import axios from '@/helpers/axios.js'
 export default {
   name: 'services',
   resource: 'Services',
   data: () => ({
-    services_url: '/services',
-    mapping_url: '/service_mappings?service_id=',
     services: [],
     documents: [],
     isLoading: false
@@ -64,13 +61,13 @@ export default {
   methods: {
     async getServices () {
       this.isLoading = true
-      const { data } = await axios(this.services_url)
+      const { data } = await this.$axios(this.$configs.services.services_url)
       this.isLoading = false
       this.services = data
     },
     async getDocuments (id) {
       this.isLoading = true
-      const { data } = await axios(this.mapping_url + id)
+      const { data } = await this.$axios(this.$configs.services.mapping_url + id)
       this.isLoading = false
       this.documents = data
     }

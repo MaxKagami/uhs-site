@@ -1,8 +1,4 @@
 export default {
-  images: {
-    logo: '@/assets/logo.png',
-    main_background: '@/assets/bg.jpg'
-  },
   contact_info: {
     telephone: '8 800 350 39 62',
     telephone_merged: '88003503962',

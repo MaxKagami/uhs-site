@@ -33,12 +33,10 @@
 </template>
 
 <script>
-import axios from '@/helpers/axios.js'
 export default {
   name: 'news-feed',
   resource: 'NewsFeed',
   data: () => ({
-    posts_resource: '/news_posts',
     posts: [],
     errors: [],
     isLoading: false
@@ -51,12 +49,12 @@ export default {
   methods: {
     async getPosts () {
       this.isLoading = true
-      const { data } = await axios(this.posts_resource)
+      const { data } = await this.$axios(this.$configs.news.posts_resource)
       this.isLoading = false
       this.posts = data
     },
     getImageURL (path) {
-      return (`http://localhost:3000/regop-komi-ru/${path}`)
+      return (this.$configs.frontend_url + path)
     },
     getFragment (text) {
       return (text.replace(/<[^>]+>/g, ' ').slice(0, 150) + ' ... ')
