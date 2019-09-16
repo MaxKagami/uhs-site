@@ -9,9 +9,14 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/style.scss'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+import Button from '@/components/CollapseButton'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.component('v-icon', Icon)
+Vue.component('Button', Button)
 
 Vue.prototype.$configs = configs
 Vue.prototype.$constants = constants

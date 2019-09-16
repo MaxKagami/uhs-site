@@ -6,8 +6,8 @@
       <b-navbar-toggle target="nav-collapse"/>
       <div class="flex-column">
         <b-navbar-nav class="nav-upper">
-          <b-nav-item :href="'callto:' + $constants.contact_info.telephone_merged">{{ $constants.contact_info.telephone }}</b-nav-item>
-          <b-nav-item :href="'mailto:' + $constants.contact_info.email">{{ $constants.contact_info.email }}</b-nav-item>
+          <b-nav-item :href="'callto:' + $constants.contact_info.telephone_merged"><v-icon name="phone-alt"/> {{ $constants.contact_info.telephone }}</b-nav-item>
+          <b-nav-item :href="'mailto:' + $constants.contact_info.email"><v-icon name="envelope"/> {{ $constants.contact_info.email }}</b-nav-item>
         </b-navbar-nav>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mr-auto nav-lower">
@@ -48,5 +48,10 @@ export default {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  color: rgb(29,78,154)!important;
+}
+.navbar-nav li a:hover {
+  color: rgb(0,151,70)!important;
+  transition: .4s ease;
 }
 </style>

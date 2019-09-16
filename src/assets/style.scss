@@ -16,7 +16,9 @@ main {
   color: $black;
   font-size: 1em;
 }
-
+.vertical-center {
+  vertical-align: middle;
+}
 // BANNER //
 .jumbotron {
   max-width: 100%;
@@ -61,4 +63,10 @@ h1 span {
   top:0;
   left:0;
   position: absolute;
+}
+
+//COLLAPSE BUTTON//
+.collapsed > .row > .col-1 > .when-opened,
+:not(.collapsed) > .row > .col-1 .when-closed {
+  display: none;
 }

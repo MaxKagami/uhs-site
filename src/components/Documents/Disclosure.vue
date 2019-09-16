@@ -13,7 +13,17 @@
                     v-b-toggle.accordion="'accordion-' + form.id"
                     variant="success"
                     @click="getDocuments(form.id)">
-            {{ form.name }}
+            <b-row>
+              <b-col cols="1">
+                <v-icon class="when-opened" name="chevron-up"/>
+                <v-icon class="when-closed" name="chevron-down"/>
+              </b-col>
+              <b-col cols="10" class="text-center">{{ form.name }}</b-col>
+              <b-col cols="1">
+                <v-icon class="when-opened" name="chevron-up"/>
+                <v-icon class="when-closed" name="chevron-down"/>
+              </b-col>
+            </b-row>
           </b-button>
         </b-card-header>
         <b-collapse :id="'accordion-' + form.id"
@@ -26,7 +36,9 @@
                       :href="$configs.backend_url + document.url"
                       target="_blank"
                       variant="outline-success">
+              <v-icon name="file-pdf"/>
               {{ document.name }}
+              .PDF
             </b-button>
           </b-card-body>
         </b-collapse>

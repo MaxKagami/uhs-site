@@ -10,7 +10,7 @@
         <div role="tablist">
           <b-card v-for="answer in answers" :key="answer.id" no-body class="mb-1">
             <b-card-header header-tag="header" class="p-1" role="tab">
-              <b-button block href="#" v-b-toggle.accordion="'accordion-' + answer.id" variant="success">{{ answer.title }}</b-button>
+              <Button :id="answer.id" :title="answer.title"/>
             </b-card-header>
             <b-collapse :id="'accordion-' + answer.id" accordion="my-accordion" role="tabpanel">
               <b-card-body>
@@ -30,7 +30,8 @@ export default {
   resource: 'Answers',
   data: () => ({
     answers: [],
-    isLoading: false
+    isLoading: false,
+    btn_arrow_name: 'chevron-down'
   }),
   mounted () {
     this.getAnswers(this.$configs.answers.answers_resource)
@@ -41,6 +42,13 @@ export default {
       const { data } = await this.$axios(url)
       this.isLoading = false
       this.answers = data
+    },
+    getAnotherIcon () {
+      if (this.btn_arrow_name === 'chevron-down') {
+        this.btn_arrow_name = 'chevron-up'
+      } else {
+        this.btn_arrow_name = 'chevron-down'
+      }
     }
   }
 }

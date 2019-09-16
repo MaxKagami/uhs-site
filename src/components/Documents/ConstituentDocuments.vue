@@ -5,7 +5,9 @@
               :href="$configs.backend_url + document.url"
               target="_blank"
               block variant="outline-success">
+      <v-icon name="file-pdf"/>
       {{ document.name }}
+      .PDF
     </b-button>
   </div>
 </template>
