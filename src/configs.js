@@ -21,7 +21,7 @@ export default {
     protection_id: '4'
   },
   news: {
-    posts_resource: '/news_posts'
+    posts_resource: '/news_posts/'
   },
   services: {
     services_url: '/services',

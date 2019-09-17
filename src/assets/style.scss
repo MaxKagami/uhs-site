@@ -43,21 +43,7 @@ h1 span {
   z-index: 9999;
   box-shadow: 0 -2px 20px -6px black;
 }
-.default-banner {
-  background: url("sm.jpg");
-  padding-top: 60px;
-  padding-bottom: 20px;
-}
-.home-banner {
-  background: url("bg.jpg") no-repeat center;
-  padding-top: 260px;
-  padding-bottom: 60px;
-}
-.services-banner {
-  background: url("bg_coop.jpg") no-repeat center;
-  padding-top: 220px;
-  padding-bottom: 60px;
-}
+
 //CAPTION//
 .caption {
   top:0;
@@ -70,3 +56,4 @@ h1 span {
 :not(.collapsed) > .row > .col-1 .when-closed {
   display: none;
 }
+

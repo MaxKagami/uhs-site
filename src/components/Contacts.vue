@@ -109,7 +109,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.default-banner {
+  background: url("../assets/sm.jpg");
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
 .squared {
   border-radius: 0 !important;
 }
