@@ -36,6 +36,19 @@ h1 span {
   color: white;
   background: $dark-blue;
 }
+.home-banner {
+  padding-top: 260px;
+  padding-bottom: 60px;
+}
+.services-banner {
+  padding-top: 220px;
+  padding-bottom: 60px;
+}
+.default-banner {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
 .box .container {
   padding: 2em;
 }
@@ -56,4 +69,6 @@ h1 span {
 :not(.collapsed) > .row > .col-1 .when-closed {
   display: none;
 }
+
+
 

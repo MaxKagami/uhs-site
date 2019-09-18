@@ -78,7 +78,5 @@ export default {
 <style lang="scss">
   .services-banner {
     background: url("../assets/bg_coop.jpg") no-repeat center;
-    padding-top: 220px;
-    padding-bottom: 60px;
   }
 </style>

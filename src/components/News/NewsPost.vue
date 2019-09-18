@@ -66,4 +66,7 @@ export default {
   padding: 23px 30px 30px 30px;
   border: 1px solid #dee0e3;
 }
+.default-banner {
+  background: url("../../assets/sm.jpg");
+}
 </style>

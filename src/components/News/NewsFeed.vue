@@ -70,8 +70,6 @@ export default {
 @import "../../assets/style";
 .default-banner {
   background: url("../../assets/sm.jpg");
-  padding-top: 60px;
-  padding-bottom: 20px;
 }
 .news-card {
   max-width: 1000px;
