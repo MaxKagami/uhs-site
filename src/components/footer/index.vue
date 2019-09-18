@@ -31,22 +31,6 @@ export default {
 }
 </script>
 
-<style>
-footer {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/footer3.jpg");
-  color: lightgray;
-}
-.info {
-  padding-top: 35px;
-  padding-bottom: 33px;
-}
-.info > div > h6 {
-  text-transform: uppercase;
-}
-.copyright {
-  padding-top: 33px;
-  padding-bottom: 30px;
-  font-size: 14px;
-  border-top: 1px solid lightgrey;
-}
+<style lang="scss">
+  @import "styles";
 </style>

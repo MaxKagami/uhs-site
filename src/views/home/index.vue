@@ -7,6 +7,7 @@
     </b-jumbotron>
     <div class="box shdw">
       <b-container>
+        <RegionsNav/>
         <span v-html="$contents.home.text.p1"/>
         <b-button block
                   squared
@@ -29,7 +30,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .home-banner {
-    background: url("../assets/bg.jpg") no-repeat center;
-  }
+  @import "styles";
 </style>

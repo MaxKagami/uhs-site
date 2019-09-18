@@ -20,13 +20,13 @@
 
 <script>
 import axios from '@/helpers/axios.js'
-import ConstituentDocuments from './ConstituentDocuments'
-import LabourProtection from './LabourProtection'
-import GeneralDocuments from './GeneralDocuments'
-import Disclosure from './Disclosure'
+import ConstituentDocuments from './components/constituent'
+import LabourProtection from './components/protection'
+import GeneralDocuments from './components/general'
+import Disclosure from './components/disclosure'
 export default {
   name: 'documents',
-  resource: 'Documents',
+  resource: 'documents',
   components: { Disclosure, GeneralDocuments, LabourProtection, ConstituentDocuments },
   data () {
     return {
@@ -53,7 +53,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .default-banner {
-    background: url("../../assets/sm.jpg");
-  }
+  @import "styles";
 </style>

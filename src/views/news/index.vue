@@ -12,7 +12,7 @@
           :key="post.id"
           active-class="is-active"
           class="text-decoration-none"
-          :to="{ name: 'news-post', params: { id: post.id } }">
+          :to="{ name: 'post', params: { id: post.id } }">
           <b-card no-body
                   class="overflow-hidden news-card">
             <b-row>
@@ -39,8 +39,8 @@
 
 <script>
 export default {
-  name: 'news-feed',
-  resource: 'NewsFeed',
+  name: 'news',
+  resource: 'News',
   data: () => ({
     posts: [],
     errors: [],
@@ -57,7 +57,7 @@ export default {
       this.posts = data
     },
     getImageURL (path) {
-      return (this.$configs.frontend_url + path)
+      return (this.$configs.frontendUrl + path)
     },
     getFragment (text) {
       return (text.replace(/<[^>]+>/g, ' ').slice(0, 150) + ' ... ')
@@ -67,37 +67,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../assets/style";
-.default-banner {
-  background: url("../../assets/sm.jpg");
-}
-.news-card {
-  max-width: 1000px;
-  height: 200px;
-  margin-bottom: 15px;
-  border-radius: 0;
-  box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
-  &:hover .card-title, &:hover .card-text span {
-    color: $green;
-}
-.card-img {
-  height: 100%;
-  border-radius: 0;
-}
-.card-title {
-  font-size: 1em;
-  font-weight: bold;
-  color: $dark-blue;
-  }
-}
-.card-text {
-  font-size: 1em;
-  color: #40403e;
-  & span {
-    color: $dark-blue;
-  }
-}
-.bold  {
-  font-weight: bold;
-}
+  @import "styles";
 </style>

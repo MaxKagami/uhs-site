@@ -12,11 +12,13 @@ import './assets/style.scss'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import Button from '@/components/CollapseButton'
+import RegionsNav from '@/components/regions-nav'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.component('v-icon', Icon)
 Vue.component('Button', Button)
+Vue.component('RegionsNav', RegionsNav)
 
 Vue.prototype.$configs = configs
 Vue.prototype.$constants = constants

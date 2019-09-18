@@ -1,0 +1,10 @@
+@import "../../assets/style";
+.svgPath {
+  fill: rgba(255,255,255,0.5);
+  stroke: #666;
+  stroke-width: 1px;
+}
+.svgPath:hover {
+  stroke: $green;
+  stroke-width: 5px;
+}

@@ -7,18 +7,14 @@
 </template>
 
 <script>
-import Home from '@/components/Home'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import Navigation from '@/components/navbar'
+import Footer from '@/components/footer'
 export default {
   name: 'app',
-  components: { Home, Navigation, Footer },
+  components: { Navigation, Footer },
   data () {
     return {
     }
   }
 }
 </script>
-
-<style>
-</style>

@@ -22,7 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .default-banner {
-    background: url("../assets/sm.jpg");
-  }
+  @import "styles";
 </style>

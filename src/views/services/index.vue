@@ -76,7 +76,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .services-banner {
-    background: url("../assets/bg_coop.jpg") no-repeat center;
-  }
+  @import "styles";
 </style>

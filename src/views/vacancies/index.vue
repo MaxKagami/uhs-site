@@ -2,7 +2,7 @@
   <div>
     <b-jumbotron class="default-banner">
       <b-container>
-        <h1><span>{{ $constants.regions.name }}</span></h1>
+        <h1><span>{{ $constants.vacancies.name }}</span></h1>
       </b-container>
     </b-jumbotron>
     <div class="box shdw">
@@ -13,15 +13,11 @@
 
 <script>
 export default {
-  name: 'regions',
-  resource: 'Regions',
-  data: () => ({
-  })
+  name: 'vacancies',
+  resource: 'Vacancies'
 }
 </script>
 
 <style lang="scss">
-  .default-banner {
-    background: url("../assets/sm.jpg");
-  }
+  @import "styles";
 </style>

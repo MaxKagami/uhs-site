@@ -1,0 +1,38 @@
+@import "../../assets/style";
+.default-banner {
+  background: url("../../assets/sm.jpg");
+}
+.news-card {
+  max-width: 1000px;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 0;
+  box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+  &:hover .card-title, &:hover .card-text span {
+    color: $green;
+  }
+  .card-img {
+    height: 100%;
+    border-radius: 0;
+  }
+  .card-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: $dark-blue;
+  }
+}
+.card-text {
+  font-size: 1em;
+  color: #40403e;
+  & span {
+    color: $dark-blue;
+  }
+}
+.bold  {
+  font-weight: bold;
+}
+.more-content {
+  width: 100%;
+  padding: 23px 30px 30px 30px;
+  border: 1px solid #dee0e3;
+}

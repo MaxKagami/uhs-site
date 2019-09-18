@@ -42,20 +42,11 @@ export default {
       const { data } = await this.$axios(url)
       this.isLoading = false
       this.answers = data
-    },
-    getAnotherIcon () {
-      if (this.btn_arrow_name === 'chevron-down') {
-        this.btn_arrow_name = 'chevron-up'
-      } else {
-        this.btn_arrow_name = 'chevron-down'
-      }
     }
   }
 }
 </script>
 
 <style lang="scss">
-  .default-banner {
-    background: url("../assets/sm.jpg");
-  }
+ @import "styles";
 </style>

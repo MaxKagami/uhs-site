@@ -14,13 +14,13 @@
                  v-for="post in posts"
                  :key="post.id">
               <span>{{ post.date }}</span>
-              <router-link :to="{ name: 'news-post', params: { id: post.id } }">
+              <router-link :to="{ name: 'post', params: { id: post.id } }">
                 {{ post.title }}
               </router-link>
             </div>
           </div>
         </b-col>
-        <router-link :to="{ name: 'news-feed' }">Назад</router-link>
+        <router-link :to="{ name: 'news' }">Назад</router-link>
       </b-row>
     </b-container>
   </div>
@@ -28,8 +28,8 @@
 
 <script>
 export default {
-  name: 'news-post',
-  resource: 'NewsPost',
+  name: 'post',
+  resource: 'Post',
   props: ['id'],
   data: () => ({
     post: [],
@@ -54,19 +54,12 @@ export default {
       this.posts = data
     },
     getImageURL (path) {
-      return (this.$configs.frontend_url + path)
+      return (this.$configs.frontendUrl + path)
     }
   }
 }
 </script>
 
 <style lang="scss">
-.more-content {
-  width: 100%;
-  padding: 23px 30px 30px 30px;
-  border: 1px solid #dee0e3;
-}
-.default-banner {
-  background: url("../../assets/sm.jpg");
-}
+  @import "styles";
 </style>

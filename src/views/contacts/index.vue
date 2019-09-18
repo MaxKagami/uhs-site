@@ -110,22 +110,5 @@ export default {
 </script>
 
 <style lang="scss">
-.default-banner {
-  background: url("../assets/sm.jpg");
-}
-.squared {
-  border-radius: 0 !important;
-}
-.callback-form {
-  margin: auto;
-}
-.margin-bottom {
-  margin-bottom: 10px;
-}
-.padding-right {
-  padding-right: 5px;
-}
-.padding-left {
-  padding-left: 5px;
-}
+  @import "styles";
 </style>

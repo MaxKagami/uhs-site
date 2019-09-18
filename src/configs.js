@@ -1,6 +1,6 @@
 export default {
-  backend_url: 'http://localhost:3000/',
-  frontend_url: 'http://localhost:3000/regop-komi-ru/',
+  backendUrl: 'http://localhost:3000/',
+  frontendUrl: 'http://localhost:3000/regop-komi-ru/',
   images: {
     logo: '@/assets/logo.png',
     main_background: '@/assets/bg.jpg'
@@ -22,6 +22,9 @@ export default {
   },
   news: {
     posts_resource: '/news_posts/'
+  },
+  regions: {
+    regions_resource: '/regions'
   },
   services: {
     services_url: '/services',
